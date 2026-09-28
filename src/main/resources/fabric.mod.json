@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "armor_reforged",
+	"version": "${version}",
+	"name": "Armor Reforged",
+	"description": "Overhauling the Vanilla armor system, as well as adding some new armors and tools.",
+	"authors": [
+		"Zyra"
+	],
+	"contact": {
+		"homepage": "https://github.com/Zyragoon",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/armor_reforged/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.zyra.armor_reforged.ArmorReforged"
+		],
+		"fabric-datagen": [
+			"com.zyra.armor_reforged.ArmorReforgedDataGenerator"
+		]
+	},
+	"mixins": [
+		"armor_reforged.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
