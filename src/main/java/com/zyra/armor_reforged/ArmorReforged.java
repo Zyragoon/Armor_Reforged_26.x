@@ -1,5 +1,6 @@
 package com.zyra.armor_reforged;
 
+import com.zyra.armor_reforged.item.Moditems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -15,6 +16,7 @@ public class ArmorReforged implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Moditems.registerModItems();
 
 
 	}
