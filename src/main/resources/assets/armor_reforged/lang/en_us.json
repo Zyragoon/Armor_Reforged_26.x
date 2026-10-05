@@ -1,6 +1,8 @@
 {
-  "item.armor_reforged.steel_ingot": "Steel Ingot"
-
+  "item.armor_reforged.steel_ingot": "Steel Ingot",
+  "item.armor_reforged.steel_axe": "Steel Axe",
+  "block.armor_reforged.steel_block": "Block of Steel",
+  "creativemodetab.armorreforged.armorreforged": "Armor Reforged"
 
 
 }

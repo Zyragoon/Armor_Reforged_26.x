@@ -1,0 +1,8 @@
+// 26.1.2	-999999999-01-01T00:00:00	Armor Reforged/Model Definitions
+f43a207555199b44df42b9685125856b58093e61 assets/armor_reforged/blockstates/steel_block.json
+f27b3ff5f64d11f87c45d7e3f1ec973bb37c12d3 assets/armor_reforged/items/steel_axe.json
+fad9826675eb0ee8c875bed4f29a4475382115f4 assets/armor_reforged/items/steel_block.json
+f9770f2ad6047cce4640b29848b6b0885fdc3f27 assets/armor_reforged/items/steel_ingot.json
+63a8e00c0ca89023e08b378cc94cbd4035f3284b assets/armor_reforged/models/block/steel_block.json
+28671fce4490e2a974dc28f06ec2268afb6f4c37 assets/armor_reforged/models/item/steel_axe.json
+8792433cd5163f7cb1a934620c9dc45ccd65dd52 assets/armor_reforged/models/item/steel_ingot.json
