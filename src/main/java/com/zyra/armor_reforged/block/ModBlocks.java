@@ -14,11 +14,21 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 
 import java.util.function.Function;
+import java.util.function.ToIntFunction;
 
 public class ModBlocks {
     public static final Block STEEL_BLOCK = registerBlock("steel_block",
             properties -> new Block(properties.strength(5f,8f).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .mapColor(MapColor.COLOR_BLACK)));
+
+    public static final Block PALE_CRYSTAL_BLOCK = registerBlock("pale_crystal_block",
+            properties -> new Block(properties.strength(1.5f).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_PURPLE)));
+
+    public static final Block JADE_CRYSTAL_BLOCK = registerBlock("jade_crystal_block",
+            properties -> new Block(properties.strength(1.5f).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_GREEN)));
+
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function){

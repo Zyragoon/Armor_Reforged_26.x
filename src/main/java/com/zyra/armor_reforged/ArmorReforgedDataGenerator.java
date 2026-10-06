@@ -1,6 +1,8 @@
 package com.zyra.armor_reforged;
 
 
+import com.zyra.armor_reforged.datagen.ModBlockLootTableProvider;
+import com.zyra.armor_reforged.datagen.ModBlockTagsProvider;
 import com.zyra.armor_reforged.datagen.ModModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -11,5 +13,7 @@ public class ArmorReforgedDataGenerator implements DataGeneratorEntrypoint {
 		var pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModBlockTagsProvider::new);
+		pack.addProvider(ModBlockLootTableProvider::new);
 	}
 }

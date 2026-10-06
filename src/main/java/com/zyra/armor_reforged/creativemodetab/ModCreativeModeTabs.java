@@ -18,8 +18,13 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.armorreforged.armorreforged"))
                     .displayItems((parameters, output) -> {
                         output.accept(Moditems.STEEL_INGOT);
+                        output.accept(Moditems.JADE_CHUNK);
+                        output.accept(Moditems.PALE_GEM_CHUNK);
                         output.accept(Moditems.STEEL_AXE);
                         output.accept(ModBlocks.STEEL_BLOCK);
+                        output.accept(ModBlocks.PALE_CRYSTAL_BLOCK);
+                        output.accept(ModBlocks.JADE_CRYSTAL_BLOCK);
+
 
                     })
 

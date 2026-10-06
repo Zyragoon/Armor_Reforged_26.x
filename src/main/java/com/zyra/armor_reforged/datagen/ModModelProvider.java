@@ -16,6 +16,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.STEEL_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.PALE_CRYSTAL_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.JADE_CRYSTAL_BLOCK);
 
 
     }
@@ -23,6 +25,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(Moditems.STEEL_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(Moditems.JADE_CHUNK, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(Moditems.PALE_GEM_CHUNK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(Moditems.STEEL_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 }

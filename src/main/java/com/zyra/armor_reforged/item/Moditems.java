@@ -17,6 +17,9 @@ import java.util.function.Function;
 public class Moditems {
 
     public static final Item STEEL_INGOT = registerItem("steel_ingot", Item::new);
+    public static final Item JADE_CHUNK = registerItem("jade_chunk", Item::new);
+    public static final Item PALE_GEM_CHUNK = registerItem("pale_gem_chunk", Item::new);
+
 
     public static final Item STEEL_AXE = registerItem("steel_axe",
             properties -> new AxeItem(ModToolMaterials.STEEL,6f,-3.2f,properties));
