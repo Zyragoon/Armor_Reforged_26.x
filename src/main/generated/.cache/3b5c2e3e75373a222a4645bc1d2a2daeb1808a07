@@ -1,3 +1,4 @@
 // 26.1.2	-999999999-01-01T00:00:00	Armor Reforged/Tags for minecraft:block
+32b13946c4cd1f944b029659ccce5fcb2adad4ff data/armor_reforged/tags/block/incorrect_for_steel_tool.json
 013fa19ed6a0db48501a48afbd6d1dedd0170176 data/minecraft/tags/block/mineable/pickaxe.json
 155cd11ca6ef9e013844d896b9ab709ee1cb2258 data/minecraft/tags/block/needs_iron_tool.json

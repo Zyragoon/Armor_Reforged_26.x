@@ -28,5 +28,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(Moditems.JADE_CHUNK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(Moditems.PALE_GEM_CHUNK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(Moditems.STEEL_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+
     }
 }

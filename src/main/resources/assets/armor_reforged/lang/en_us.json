@@ -3,9 +3,18 @@
   "item.armor_reforged.pale_gem_chunk": "Pale Gem Chunk",
   "item.armor_reforged.jade_chunk": "Jade Chunk",
   "item.armor_reforged.steel_axe": "Steel Axe",
+  "item.armor_reforged.steel_helmet": "Steel Helmet",
+  "item.armor_reforged.steel_chestplate": "Steel Chestplate",
+  "item.armor_reforged.steel_leggings": "Steel Leggings",
+  "item.armor_reforged.steel_boots": "Steel Boots",
   "block.armor_reforged.steel_block": "Block of Steel",
   "block.armor_reforged.pale_crystal_block": "Pale Crystal Block",
   "block.armor_reforged.jade_crystal_block": "Jade Crystal Block",
+
+
+
+
+
   "creativemodetab.armorreforged.armorreforged": "Armor Reforged"
 
 

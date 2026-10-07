@@ -11,6 +11,7 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.function.Function;
 
@@ -23,6 +24,24 @@ public class Moditems {
 
     public static final Item STEEL_AXE = registerItem("steel_axe",
             properties -> new AxeItem(ModToolMaterials.STEEL,6f,-3.2f,properties));
+
+
+    public static final Item STEEL_HELMET = registerItem("steel_helmet",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final Item STEEL_CHESTPLATE = registerItem("steel_chestplate",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final Item STEEL_LEGGINGS = registerItem("steel_leggings",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final Item STEEL_BOOTS = registerItem("steel_boots",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorType.BOOTS)));
+
+
+
+
+
+
+
+
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function){
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(ArmorReforged.MOD_ID, name),

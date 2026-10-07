@@ -24,6 +24,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEEL_BLOCK);
                         output.accept(ModBlocks.PALE_CRYSTAL_BLOCK);
                         output.accept(ModBlocks.JADE_CRYSTAL_BLOCK);
+                        output.accept(Moditems.STEEL_HELMET);
+                        output.accept(Moditems.STEEL_CHESTPLATE);
+                        output.accept(Moditems.STEEL_LEGGINGS);
+                        output.accept(Moditems.STEEL_BOOTS);
 
 
                     })

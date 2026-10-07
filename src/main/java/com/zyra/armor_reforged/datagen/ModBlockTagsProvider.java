@@ -1,6 +1,7 @@
 package com.zyra.armor_reforged.datagen;
 
 import com.zyra.armor_reforged.block.ModBlocks;
+import com.zyra.armor_reforged.tags.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
@@ -24,5 +25,9 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.PALE_CRYSTAL_BLOCK)
                 .add(ModBlocks.JADE_CRYSTAL_BLOCK);
+
+
+        valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
     }
 }

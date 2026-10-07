@@ -23,5 +23,6 @@ public class ArmorReforged implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 
+
 	}
 }
