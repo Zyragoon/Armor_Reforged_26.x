@@ -1,3 +1,8 @@
 // 26.1.2	-999999999-01-01T00:00:00	Armor Reforged/Tags for minecraft:item
 fdbdf294b0847feb6f012ab3ba52c59ba66e47fd data/armor_reforged/tags/item/steel_repair.json
 d7893d633d3256a5244fd7d7b8e9606c5ec26dc0 data/minecraft/tags/item/axes.json
+fdbdf294b0847feb6f012ab3ba52c59ba66e47fd data/minecraft/tags/item/beacon_payment_items.json
+85117020eac3ab30e671cce55a92c9a092b77ec5 data/minecraft/tags/item/chest_armor.json
+2a7cb7af9ad8d727c864a4fb2f063af3406703b6 data/minecraft/tags/item/foot_armor.json
+91b426e89d158cf2dc2067c5e4201f46f9d8a7f1 data/minecraft/tags/item/head_armor.json
+713d504ac6119191e384f1dd8e22042b5e7d2316 data/minecraft/tags/item/leg_armor.json

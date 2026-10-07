@@ -19,15 +19,18 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.STEEL_BLOCK)
                 .add(ModBlocks.JADE_CRYSTAL_BLOCK)
-                .add(ModBlocks.PALE_CRYSTAL_BLOCK);
+                .add(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
 
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.PALE_CRYSTAL_BLOCK)
+                .add(ModBlocks.RHODONITE_CRYSTAL_BLOCK)
                 .add(ModBlocks.JADE_CRYSTAL_BLOCK);
 
 
         valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
+                .add(ModBlocks.STEEL_BLOCK);
     }
 }

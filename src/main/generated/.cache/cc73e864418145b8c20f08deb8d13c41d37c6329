@@ -1,3 +1,4 @@
 // 26.1.2	-999999999-01-01T00:00:00	Armor Reforged/Block Loot Tables
-2ffedde60fb15decc7638891bd704f5f68fcbf7e data/armor_reforged/loot_table/blocks/jade_crystal_block.json
+54eee483fa0b87478655868f7daa397bf65ea7f0 data/armor_reforged/loot_table/blocks/jade_crystal_block.json
+5b142e3e4cf0c9c1b09fd5fc7b94afda5a73309d data/armor_reforged/loot_table/blocks/rhodonite_crystal_block.json
 d0da6e6f93cc130ed585524380224c26754e5448 data/armor_reforged/loot_table/blocks/steel_block.json

@@ -21,9 +21,9 @@ public class ModBlocks {
             properties -> new Block(properties.strength(5f,8f).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .mapColor(MapColor.COLOR_BLACK)));
 
-    public static final Block PALE_CRYSTAL_BLOCK = registerBlock("pale_crystal_block",
+    public static final Block RHODONITE_CRYSTAL_BLOCK = registerBlock("rhodonite_crystal_block",
             properties -> new Block(properties.strength(1.5f).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()
-                    .mapColor(MapColor.COLOR_PURPLE)));
+                    .mapColor(MapColor.COLOR_RED)));
 
     public static final Block JADE_CRYSTAL_BLOCK = registerBlock("jade_crystal_block",
             properties -> new Block(properties.strength(1.5f).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()

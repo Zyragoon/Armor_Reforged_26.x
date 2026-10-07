@@ -2,10 +2,8 @@ package com.zyra.armor_reforged;
 
 import com.zyra.armor_reforged.block.ModBlocks;
 import com.zyra.armor_reforged.creativemodetab.ModCreativeModeTabs;
-import com.zyra.armor_reforged.item.Moditems;
+import com.zyra.armor_reforged.item.ModItems;
 import net.fabricmc.api.ModInitializer;
-
-import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +17,7 @@ public class ArmorReforged implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModCreativeModeTabs.registerModCreativeModeTabs();
-		Moditems.registerModItems();
+		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
 

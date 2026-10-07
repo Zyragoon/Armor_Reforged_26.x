@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "armor_reforged:block/pale_crystal_block"
+    "all": "armor_reforged:block/rhodonite_crystal_block"
   }
 }

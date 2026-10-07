@@ -1,7 +1,7 @@
 package com.zyra.armor_reforged.datagen;
 
 import com.zyra.armor_reforged.block.ModBlocks;
-import com.zyra.armor_reforged.item.Moditems;
+import com.zyra.armor_reforged.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.core.HolderLookup;
@@ -28,7 +28,8 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.STEEL_BLOCK);
 
-        add(ModBlocks.JADE_CRYSTAL_BLOCK, createMultipleOreDrops(ModBlocks.JADE_CRYSTAL_BLOCK, Moditems.JADE_CHUNK,3,8));
+        add(ModBlocks.JADE_CRYSTAL_BLOCK, createMultipleOreDrops(ModBlocks.JADE_CRYSTAL_BLOCK, ModItems.JADE_CHUNK,3,5));
+        add(ModBlocks.RHODONITE_CRYSTAL_BLOCK, createMultipleOreDrops(ModBlocks.RHODONITE_CRYSTAL_BLOCK, ModItems.RHODONITE_CHUNK,3,5));
     }
 
 

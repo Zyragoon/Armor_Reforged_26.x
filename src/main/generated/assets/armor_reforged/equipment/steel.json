@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "armor_reforged:steel"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "armor_reforged:steel"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "armor_reforged:steel"
+      }
+    ]
+  }
+}

@@ -8,23 +8,21 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.function.Function;
 
-public class Moditems {
+public class ModItems {
 
     public static final Item STEEL_INGOT = registerItem("steel_ingot", Item::new);
     public static final Item JADE_CHUNK = registerItem("jade_chunk", Item::new);
-    public static final Item PALE_GEM_CHUNK = registerItem("pale_gem_chunk", Item::new);
+    public static final Item RHODONITE_CHUNK = registerItem("rhodonite_chunk", Item::new);
 
 
     public static final Item STEEL_AXE = registerItem("steel_axe",
-            properties -> new AxeItem(ModToolMaterials.STEEL,6f,-3.2f,properties));
-
+            properties -> new AxeItem(ModToolMaterials.STEEL,6f,-3.1f,properties));
 
     public static final Item STEEL_HELMET = registerItem("steel_helmet",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorType.HELMET)));
