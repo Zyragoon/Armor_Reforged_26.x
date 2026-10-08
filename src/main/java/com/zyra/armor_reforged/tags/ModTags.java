@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> INCORRECT_FOR_STEEL_TOOL = createTag("incorrect_for_steel_tool");
+        public static final TagKey<Block> NEEDS_STEEL_TOOL = createTag("needs_steel_tool");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(ArmorReforged.MOD_ID, name));
@@ -20,6 +21,7 @@ public class ModTags {
     public static class Items {
 
         public static final TagKey<Item> STEEL_REPAIR = createTag("steel_repair");
+        //public static final TagKey<Item> REPAIRS_STEEL_ARMOR = createTag("repairs_steel_armor");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(ArmorReforged.MOD_ID, name));

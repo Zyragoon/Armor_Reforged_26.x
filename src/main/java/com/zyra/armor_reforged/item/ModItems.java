@@ -21,6 +21,10 @@ public class ModItems {
     public static final Item RHODONITE_CHUNK = registerItem("rhodonite_chunk", Item::new);
 
 
+    public static final Item STEEL_SWORD = registerItem("steel_sword",
+            properties -> new Item(properties.sword(ModToolMaterials.STEEL, 3f,-2.4f)));
+    public static final Item STEEL_PICKAXE = registerItem("steel_pickaxe",
+            properties -> new Item(properties.pickaxe(ModToolMaterials.STEEL,1f,-2.8f)));
     public static final Item STEEL_AXE = registerItem("steel_axe",
             properties -> new AxeItem(ModToolMaterials.STEEL,6f,-3.1f,properties));
 

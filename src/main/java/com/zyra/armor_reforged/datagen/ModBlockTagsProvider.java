@@ -24,13 +24,22 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RHODONITE_CRYSTAL_BLOCK)
+                .add(ModBlocks.STEEL_BLOCK)
                 .add(ModBlocks.JADE_CRYSTAL_BLOCK);
 
 
-        valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL)
-                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        valueLookupBuilder(ModTags.Blocks.NEEDS_STEEL_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.RHODONITE_CRYSTAL_BLOCK)
+                .add(ModBlocks.STEEL_BLOCK)
+                .add(ModBlocks.JADE_CRYSTAL_BLOCK);
 
         valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(ModBlocks.STEEL_BLOCK);
+
+
+        valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL)
+                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
     }
 }

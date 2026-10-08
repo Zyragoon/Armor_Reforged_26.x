@@ -26,11 +26,25 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ItemTags.AXES)
                 .add(ModItems.STEEL_AXE);
 
+        valueLookupBuilder(ItemTags.SWORDS)
+                .add(ModItems.STEEL_SWORD);
 
-        valueLookupBuilder(ItemTags.HEAD_ARMOR).add(ModItems.STEEL_HELMET);
-        valueLookupBuilder(ItemTags.CHEST_ARMOR).add(ModItems.STEEL_CHESTPLATE);
-        valueLookupBuilder(ItemTags.LEG_ARMOR).add(ModItems.STEEL_LEGGINGS);
-        valueLookupBuilder(ItemTags.FOOT_ARMOR).add(ModItems.STEEL_BOOTS);
+        valueLookupBuilder(ItemTags.PICKAXES)
+                .add(ModItems.STEEL_PICKAXE);
+
+
+        valueLookupBuilder(ItemTags.HEAD_ARMOR)
+                .add(ModItems.STEEL_HELMET);
+
+        valueLookupBuilder(ItemTags.CHEST_ARMOR)
+                .add(ModItems.STEEL_CHESTPLATE);
+
+        valueLookupBuilder(ItemTags.LEG_ARMOR)
+                .add(ModItems.STEEL_LEGGINGS);
+
+        valueLookupBuilder(ItemTags.FOOT_ARMOR)
+                .add(ModItems.STEEL_BOOTS);
+
 
 
         valueLookupBuilder(ItemTags.BEACON_PAYMENT_ITEMS)

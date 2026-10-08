@@ -20,7 +20,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.STEEL_INGOT);
                         output.accept(ModItems.JADE_CHUNK);
                         output.accept(ModItems.RHODONITE_CHUNK);
+                        output.accept(ModItems.STEEL_SWORD);
                         output.accept(ModItems.STEEL_AXE);
+                        output.accept(ModItems.STEEL_PICKAXE);
                         output.accept(ModBlocks.STEEL_BLOCK);
                         output.accept(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
                         output.accept(ModBlocks.JADE_CRYSTAL_BLOCK);

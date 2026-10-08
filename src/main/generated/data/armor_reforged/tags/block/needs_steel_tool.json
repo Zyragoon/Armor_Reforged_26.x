@@ -1,5 +1,6 @@
 {
   "values": [
+    "#minecraft:needs_iron_tool",
     "armor_reforged:rhodonite_crystal_block",
     "armor_reforged:steel_block",
     "armor_reforged:jade_crystal_block"
