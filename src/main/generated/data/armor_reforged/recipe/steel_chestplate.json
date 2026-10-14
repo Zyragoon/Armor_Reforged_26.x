@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel",
+  "key": {
+    "I": "armor_reforged:steel_ingot"
+  },
+  "pattern": [
+    "I I",
+    "III",
+    "III"
+  ],
+  "result": {
+    "id": "armor_reforged:steel_chestplate"
+  }
+}

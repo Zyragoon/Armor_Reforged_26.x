@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel",
+  "key": {
+    "I": "armor_reforged:steel_ingot"
+  },
+  "pattern": [
+    "III",
+    "I I"
+  ],
+  "result": {
+    "id": "armor_reforged:steel_helmet"
+  }
+}

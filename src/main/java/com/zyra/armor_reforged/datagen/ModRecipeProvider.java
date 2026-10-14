@@ -8,6 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
 
@@ -55,6 +56,101 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.STEEL_INGOT), has(ModItems.STEEL_INGOT))
                         .group("steel")
                         .save(output, "steel_nuggets_to_steel_ingot");
+
+
+                shaped(RecipeCategory.COMBAT,ModItems.STEEL_SWORD)
+                        .pattern("I")
+                        .pattern("I")
+                        .pattern("S")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
+
+                shaped(RecipeCategory.TOOLS,ModItems.STEEL_PICKAXE)
+                        .pattern("III")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
+
+                shaped(RecipeCategory.TOOLS,ModItems.STEEL_SHOVEL)
+                        .pattern("I")
+                        .pattern("S")
+                        .pattern("S")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
+
+                shaped(RecipeCategory.TOOLS,ModItems.STEEL_AXE)
+                        .pattern("II")
+                        .pattern("SI")
+                        .pattern("S ")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
+
+                shaped(RecipeCategory.TOOLS,ModItems.STEEL_HOE)
+                        .pattern("II")
+                        .pattern("S ")
+                        .pattern("S ")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT,ModItems.STEEL_SPEAR)
+                        .pattern("  I")
+                        .pattern(" S ")
+                        .pattern("S  ")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT,ModItems.STEEL_HELMET)
+                        .pattern("III")
+                        .pattern("I I")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT,ModItems.STEEL_CHESTPLATE)
+                        .pattern("I I")
+                        .pattern("III")
+                        .pattern("III")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT,ModItems.STEEL_LEGGINGS)
+                        .pattern("III")
+                        .pattern("I I")
+                        .pattern("I I")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT,ModItems.STEEL_BOOTS)
+                        .pattern("I I")
+                        .pattern("I I")
+                        .define('I',ModItems.STEEL_INGOT)
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
+                        .group("steel")
+                        .save(output);
             }
         };
     }
