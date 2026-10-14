@@ -26,6 +26,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(ModItems.STEEL_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.STEEL_NUGGET, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.JADE_CHUNK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.RHODONITE_CHUNK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.STEEL_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);

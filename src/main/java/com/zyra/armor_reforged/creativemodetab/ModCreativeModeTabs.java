@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.armorreforged.armorreforged"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.STEEL_INGOT);
+                        output.accept(ModItems.STEEL_NUGGET);
                         output.accept(ModItems.JADE_CHUNK);
                         output.accept(ModItems.RHODONITE_CHUNK);
                         output.accept(ModItems.STEEL_SWORD);

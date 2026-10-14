@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "steel",
+  "ingredient": "armor_reforged:steel_helmet",
+  "result": {
+    "id": "armor_reforged:steel_nugget"
+  }
+}

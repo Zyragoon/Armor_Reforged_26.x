@@ -15,5 +15,6 @@ public class ArmorReforgedDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModBlockLootTableProvider::new);
 		pack.addProvider(ModItemTagsProvider::new);
 		pack.addProvider(ModEquipmentAssestProvider::new);
+		pack.addProvider(ModRecipeProvider::new);
 	}
 }
