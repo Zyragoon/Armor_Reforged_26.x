@@ -7,9 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.function.Function;
@@ -27,6 +25,14 @@ public class ModItems {
             properties -> new Item(properties.pickaxe(ModToolMaterials.STEEL,1f,-2.8f)));
     public static final Item STEEL_AXE = registerItem("steel_axe",
             properties -> new AxeItem(ModToolMaterials.STEEL,6f,-3.1f,properties));
+    public static final Item STEEL_HOE = registerItem("steel_hoe",
+            properties -> new HoeItem(ModToolMaterials.STEEL,-2.0f,-0.5f, properties));
+    public static final Item STEEL_SHOVEL = registerItem("steel_shovel",
+            properties -> new ShovelItem(ModToolMaterials.STEEL,1.5f,-3.0f,properties));
+    public static final Item STEEL_SPEAR = registerItem("steel_spear",
+            properties -> new Item(properties.spear(ModToolMaterials.STEEL,1.0f,1.05f,0.55f,3.0f,10.5f,6.5f,5.1f,10.5f,4.6f)));
+
+
 
     public static final Item STEEL_HELMET = registerItem("steel_helmet",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorType.HELMET)));

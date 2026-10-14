@@ -32,6 +32,15 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.STEEL_PICKAXE);
 
+        valueLookupBuilder(ItemTags.HOES)
+                .add(ModItems.STEEL_HOE);
+
+        valueLookupBuilder(ItemTags.SHOVELS)
+                .add(ModItems.STEEL_SHOVEL);
+
+        valueLookupBuilder(ItemTags.SPEARS)
+                .add(ModItems.STEEL_SPEAR);
+
 
         valueLookupBuilder(ItemTags.HEAD_ARMOR)
                 .add(ModItems.STEEL_HELMET);

@@ -31,6 +31,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.STEEL_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.STEEL_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.STEEL_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.STEEL_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.STEEL_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModelGenerators.generateSpear(ModItems.STEEL_SPEAR);
 
 
         itemModelGenerators.generateTrimmableItem(ModItems.STEEL_HELMET, ModArmorMaterials.STEEL_KEY,
