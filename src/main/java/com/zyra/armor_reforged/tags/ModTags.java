@@ -21,7 +21,7 @@ public class ModTags {
     public static class Items {
 
         public static final TagKey<Item> STEEL_REPAIR = createTag("steel_repair");
-        //public static final TagKey<Item> REPAIRS_STEEL_ARMOR = createTag("repairs_steel_armor");
+
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(ArmorReforged.MOD_ID, name));
