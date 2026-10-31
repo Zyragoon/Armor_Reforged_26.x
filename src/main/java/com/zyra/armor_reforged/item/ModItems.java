@@ -18,6 +18,7 @@ public class ModItems {
     public static final Item JADE_CHUNK = registerItem("jade_chunk", Item::new);
     public static final Item RHODONITE_CHUNK = registerItem("rhodonite_chunk", Item::new);
     public static final Item STEEL_NUGGET = registerItem("steel_nugget", Item::new);
+    public static final Item IRON_PLATE = registerItem("iron_plate", Item::new);
 
 
     public static final Item STEEL_SWORD = registerItem("steel_sword",

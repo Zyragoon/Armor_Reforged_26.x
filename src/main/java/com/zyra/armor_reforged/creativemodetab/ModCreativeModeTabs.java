@@ -21,15 +21,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.STEEL_NUGGET);
                         output.accept(ModItems.JADE_CHUNK);
                         output.accept(ModItems.RHODONITE_CHUNK);
+                        output.accept(ModItems.IRON_PLATE);
+
                         output.accept(ModItems.STEEL_SWORD);
                         output.accept(ModItems.STEEL_AXE);
                         output.accept(ModItems.STEEL_PICKAXE);
                         output.accept(ModItems.STEEL_HOE);
                         output.accept(ModItems.STEEL_SHOVEL);
                         output.accept(ModItems.STEEL_SPEAR);
+
                         output.accept(ModBlocks.STEEL_BLOCK);
                         output.accept(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
                         output.accept(ModBlocks.JADE_CRYSTAL_BLOCK);
+
                         output.accept(ModItems.STEEL_HELMET);
                         output.accept(ModItems.STEEL_CHESTPLATE);
                         output.accept(ModItems.STEEL_LEGGINGS);

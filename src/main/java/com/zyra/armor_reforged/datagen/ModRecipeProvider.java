@@ -151,6 +151,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.STEEL_INGOT),has(ModItems.STEEL_INGOT))
                         .group("steel")
                         .save(output);
+
+                shaped(RecipeCategory.MISC,ModItems.IRON_PLATE)
+                        .pattern("I")
+                        .pattern("I")
+                        .define('I',Items.IRON_INGOT)
+                        .unlockedBy(getHasName(Items.IRON_INGOT),has(Items.IRON_INGOT))
+                        .group("iron")
+                        .save(output);
             }
         };
     }
