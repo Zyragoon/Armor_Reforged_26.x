@@ -1,6 +1,7 @@
 package com.zyra.armor_reforged.block;
 
 import com.zyra.armor_reforged.ArmorReforged;
+import com.zyra.armor_reforged.block.custom.AlloySmelterBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -28,6 +29,9 @@ public class ModBlocks {
     public static final Block JADE_CRYSTAL_BLOCK = registerBlock("jade_crystal_block",
             properties -> new Block(properties.strength(1.5f).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()
                     .mapColor(MapColor.COLOR_GREEN)));
+
+    public static final Block ALLOY_SMELTER = registerBlock("alloy_smelter",
+            properties -> new AlloySmelterBlock(properties.strength(3f).requiresCorrectToolForDrops()));
 
 
 

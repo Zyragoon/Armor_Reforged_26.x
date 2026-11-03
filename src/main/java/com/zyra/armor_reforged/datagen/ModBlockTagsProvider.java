@@ -19,7 +19,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.STEEL_BLOCK)
                 .add(ModBlocks.JADE_CRYSTAL_BLOCK)
-                .add(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
+                .add(ModBlocks.RHODONITE_CRYSTAL_BLOCK)
+                .add(ModBlocks.ALLOY_SMELTER);
 
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)

@@ -33,6 +33,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEEL_BLOCK);
                         output.accept(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
                         output.accept(ModBlocks.JADE_CRYSTAL_BLOCK);
+                        output.accept(ModBlocks.ALLOY_SMELTER);
 
                         output.accept(ModItems.STEEL_HELMET);
                         output.accept(ModItems.STEEL_CHESTPLATE);

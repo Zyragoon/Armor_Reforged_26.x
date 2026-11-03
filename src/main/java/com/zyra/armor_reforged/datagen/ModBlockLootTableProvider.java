@@ -27,6 +27,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     public void generate() {
 
         dropSelf(ModBlocks.STEEL_BLOCK);
+        dropSelf(ModBlocks.ALLOY_SMELTER);
 
         add(ModBlocks.JADE_CRYSTAL_BLOCK, createMultipleOreDrops(ModBlocks.JADE_CRYSTAL_BLOCK, ModItems.JADE_CHUNK,3,5));
         add(ModBlocks.RHODONITE_CRYSTAL_BLOCK, createMultipleOreDrops(ModBlocks.RHODONITE_CRYSTAL_BLOCK, ModItems.RHODONITE_CHUNK,3,5));
