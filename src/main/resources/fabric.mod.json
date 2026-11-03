@@ -18,8 +18,8 @@
 		"main": [
 			"com.zyra.armor_reforged.ArmorReforged"
 		],
-		"fabric-datagen": [
-			"com.zyra.armor_reforged.ArmorReforgedDataGenerator"
+		"client": [
+			"com.zyra.armor_reforged.ArmorReforgedClient"
 		]
 	},
 	"mixins": [

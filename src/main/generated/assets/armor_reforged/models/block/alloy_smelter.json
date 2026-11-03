@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "armor_reforged:block/alloy_smelter_bottom",
+    "front": "armor_reforged:block/alloy_smelter_front",
+    "side": "armor_reforged:block/alloy_smelter_side",
+    "top": "armor_reforged:block/alloy_smelter_top"
+  }
+}

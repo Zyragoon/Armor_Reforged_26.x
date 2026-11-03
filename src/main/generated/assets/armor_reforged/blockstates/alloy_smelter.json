@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "armor_reforged:block/alloy_smelter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "armor_reforged:block/alloy_smelter"
+    },
+    "facing=south": {
+      "model": "armor_reforged:block/alloy_smelter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "armor_reforged:block/alloy_smelter",
+      "y": 270
+    }
+  }
+}

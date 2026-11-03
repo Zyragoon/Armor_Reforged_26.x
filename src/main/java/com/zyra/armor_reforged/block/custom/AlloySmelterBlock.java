@@ -19,6 +19,8 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jspecify.annotations.Nullable;
+import com.zyra.armor_reforged.block.entity.ModBlockEntities;
+import com.zyra.armor_reforged.block.entity.custom.AlloySmelterBlockEntity;
 
 public class AlloySmelterBlock extends BaseEntityBlock {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -49,7 +51,7 @@ public class AlloySmelterBlock extends BaseEntityBlock {
     }
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos worldPosition, BlockState blockState) {
-        return
+        return new AlloySmelterBlockEntity(worldPosition, blockState);
     }
 
     @Override
@@ -58,12 +60,35 @@ public class AlloySmelterBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        return super.useWithoutItem(state, level, pos, player, hitResult);
+    protected InteractionResult useWithoutItem(
+            BlockState state,
+            Level level,
+            BlockPos pos,
+            Player player,
+            BlockHitResult hitResult
+    ) {
+        if (!level.isClientSide()
+                && level.getBlockEntity(pos) instanceof AlloySmelterBlockEntity smelter) {
+            player.openMenu(smelter);
+        }
+
+        return InteractionResult.SUCCESS;
     }
 
     @Override
-    public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState blockState, BlockEntityType<T> type) {
-        return super.getTicker(level, blockState, type);
+    public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(
+            Level level,
+            BlockState blockState,
+            BlockEntityType<T> type
+    ) {
+        if (level.isClientSide()) {
+            return null;
+        }
+
+        return createTickerHelper(
+                type,
+                ModBlockEntities.ALLOY_SMELTER_BE,
+                AlloySmelterBlockEntity::tick
+        );
     }
 }
