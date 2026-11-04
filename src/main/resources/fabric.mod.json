@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"com.zyra.armor_reforged.ArmorReforgedClient"
+		],
+		"fabric-datagen": [
+			"com.zyra.armor_reforged.ArmorReforgedDataGenerator"
 		]
 	},
 	"mixins": [

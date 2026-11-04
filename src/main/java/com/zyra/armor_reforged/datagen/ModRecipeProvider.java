@@ -11,6 +11,8 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -159,6 +161,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.IRON_INGOT),has(Items.IRON_INGOT))
                         .group("iron")
                         .save(output);
+
+
+                shaped(RecipeCategory.MISC,ModBlocks.ALLOY_SMELTER)
+                        .pattern("III")
+                        .pattern("IFI")
+                        .pattern("BBB")
+                        .define('I',ModItems.IRON_PLATE)
+                        .define('F', Blocks.FURNACE)
+                        .define('B',Blocks.BRICKS)
+                        .unlockedBy(getHasName(ModItems.IRON_PLATE),has(ModItems.IRON_PLATE))
+                        .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
+                        .group("blocks")
+                        .save(output,"alloy_smelter");
             }
         };
     }

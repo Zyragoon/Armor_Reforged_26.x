@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "blocks",
+  "key": {
+    "B": "minecraft:bricks",
+    "F": "minecraft:furnace",
+    "I": "armor_reforged:iron_plate"
+  },
+  "pattern": [
+    "III",
+    "IFI",
+    "BBB"
+  ],
+  "result": {
+    "id": "armor_reforged:alloy_smelter"
+  }
+}
