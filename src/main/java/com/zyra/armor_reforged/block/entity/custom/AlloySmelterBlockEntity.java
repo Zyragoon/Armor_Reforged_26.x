@@ -43,7 +43,7 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
     private int maxProgress = 72;
 
     private int burnTime = 0;
-    private int maxBurnTime = 1600;
+    private int maxBurnTime = 0;
 
     public AlloySmelterBlockEntity(BlockPos worldPosition, BlockState blockState) {
         super(ModBlockEntities.ALLOY_SMELTER_BE, worldPosition, blockState);
@@ -100,7 +100,7 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
         progress = input.getIntOr("alloy_smelter.progress", 0);
         maxProgress = input.getIntOr("alloy_smelter.max_progress", 72);
         burnTime = input.getIntOr("alloy_smelter.burn_time", 0);
-        maxBurnTime = input.getIntOr("alloy_smelter.max_burn_time", 1600);
+        maxBurnTime = input.getIntOr("alloy_smelter.max_burn_time", 0);
 
         ContainerHelper.loadAllItems(input, inventory);
     }
@@ -140,7 +140,8 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
         if (entity.hasRecipe()) {
 
             if (entity.burnTime == 0 && entity.hasFuel()) {
-                entity.burnTime = entity.getFuelTime();
+                entity.maxBurnTime = entity.getFuelTime();
+                entity.burnTime = entity.maxBurnTime;
                 entity.consumeFuel();
             }
 
@@ -181,28 +182,28 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
         return hasInput1 && hasInput2 && outputIsValid && hasOutputSpace;
     }
     private boolean hasFuel() {
-        ItemStack fuel = inventory.get(FUEL_SLOT);
-
-        return fuel.is(Items.COAL) || fuel.is(Items.CHARCOAL);
+        return getFuelTime() > 0;
     }
 
     private int getFuelTime() {
-        ItemStack fuel = inventory.get(FUEL_SLOT);
-
-        if (fuel.is(Items.COAL) || fuel.is(Items.CHARCOAL)) {
-            return 1600;
+        if (level == null) {
+            return 0;
         }
 
-        return 0;
+        return level.fuelValues().burnDuration(inventory.get(FUEL_SLOT));
     }
 
     private void consumeFuel() {
         ItemStack fuel = inventory.get(FUEL_SLOT);
 
-        fuel.shrink(1);
+        if (fuel.is(Items.LAVA_BUCKET)) {
+            inventory.set(FUEL_SLOT, new ItemStack(Items.BUCKET));
+        } else {
+            fuel.shrink(1);
 
-        if (fuel.isEmpty()) {
-            inventory.set(FUEL_SLOT, ItemStack.EMPTY);
+            if (fuel.isEmpty()) {
+                inventory.set(FUEL_SLOT, ItemStack.EMPTY);
+            }
         }
     }
 

@@ -1,5 +1,6 @@
 package com.zyra.armor_reforged.menu;
 
+import com.zyra.armor_reforged.ArmorReforged;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.RenderPipelines;
@@ -10,8 +11,10 @@ import net.minecraft.network.chat.Component;
 public class AlloySmelterScreen extends AbstractContainerScreen<AlloySmelterMenu> {
 
     private static final Identifier CONTAINER_TEXTURE =
-            Identifier.withDefaultNamespace("textures/gui/container/dispenser.png");
-
+            Identifier.fromNamespaceAndPath(
+                    ArmorReforged.MOD_ID,
+                    "textures/gui/alloy_smelter/alloy_smelter.png"
+            );
     public AlloySmelterScreen(
             AlloySmelterMenu menu,
             Inventory inventory,

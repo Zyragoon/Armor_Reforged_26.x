@@ -45,18 +45,18 @@ public class AlloySmelterMenu extends AbstractContainerMenu {
         container.startOpen(playerInventory.player);
 
         // Input slot 1
-        this.addSlot(new Slot(container, INPUT_SLOT_1, 44, 35));
+        this.addSlot(new Slot(container, INPUT_SLOT_1, 36, 17));
 
         // Input slot 2
-        this.addSlot(new Slot(container, INPUT_SLOT_2, 62, 35));
+        this.addSlot(new Slot(container, INPUT_SLOT_2, 76, 17));
 
         // Fuel slot
-        this.addSlot(new Slot(container, FUEL_SLOT, 44, 57) {
+        this.addSlot(new Slot(container, FUEL_SLOT, 56, 53) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return isFuel(stack);
-            }
-        });
+                return playerInventory.player.level()
+                        .fuelValues().burnDuration(stack) > 0;
+            }});
 
         // Output slot
         this.addSlot(new Slot(container, OUTPUT_SLOT, 116, 35) {
