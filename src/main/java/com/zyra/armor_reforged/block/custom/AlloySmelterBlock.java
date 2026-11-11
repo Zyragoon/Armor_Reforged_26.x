@@ -21,15 +21,24 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.jspecify.annotations.Nullable;
 import com.zyra.armor_reforged.block.entity.ModBlockEntities;
 import com.zyra.armor_reforged.block.entity.custom.AlloySmelterBlockEntity;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.util.RandomSource;
 
 public class AlloySmelterBlock extends BaseEntityBlock {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final MapCodec<AlloySmelterBlock> CODEC = simpleCodec(AlloySmelterBlock::new);
-
+    public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
 
     public AlloySmelterBlock(Properties properties) {
         super(properties);
+
+        registerDefaultState(
+                this.stateDefinition.any()
+                        .setValue(FACING, Direction.NORTH)
+                        .setValue(LIT, false)
+        );
     }
 
     /* FACING */
@@ -40,8 +49,10 @@ public class AlloySmelterBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+    protected void createBlockStateDefinition(
+            StateDefinition.Builder<Block, BlockState> builder
+    ) {
+        builder.add(FACING, LIT);
     }
 
     /* BLOCK ENTITY */
@@ -91,4 +102,37 @@ public class AlloySmelterBlock extends BaseEntityBlock {
                 AlloySmelterBlockEntity::tick
         );
     }
+
+    @Override
+    public void animateTick(
+            BlockState state,
+            Level level,
+            BlockPos pos,
+            RandomSource random
+    ) {
+        if (!state.getValue(LIT)) {
+            return;
+        }
+
+        if (random.nextDouble() < 0.6) {
+            Direction facing = state.getValue(FACING);
+
+            double x = pos.getX() + 0.5 + facing.getStepX() * 0.52;
+            double y = pos.getY() + 0.4 + random.nextDouble() * 0.3;
+            double z = pos.getZ() + 0.5 + facing.getStepZ() * 0.52;
+
+            level.addParticle(
+                    ParticleTypes.SMOKE,
+                    x, y, z,
+                    0.0, 0.0, 0.0
+            );
+
+            level.addParticle(
+                    ParticleTypes.FLAME,
+                    x, y, z,
+                    0.0, 0.0, 0.0
+            );
+        }
+    }
+
 }

@@ -28,6 +28,7 @@ import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
 import com.zyra.armor_reforged.menu.AlloySmelterMenu;
 import net.minecraft.world.Container;
+import com.zyra.armor_reforged.block.custom.AlloySmelterBlock;
 
 
 public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvider, ImplementedInventory{
@@ -165,6 +166,17 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
                 || entity.progress > 0) {
             entity.setChanged();
         }
+
+        boolean isBurning = entity.burnTime > 0;
+
+        if (state.getValue(AlloySmelterBlock.LIT) != isBurning) {
+            level.setBlock(
+                    pos,
+                    state.setValue(AlloySmelterBlock.LIT, isBurning),
+                    3
+            );
+        }
+
     }
 
     private boolean hasRecipe() {

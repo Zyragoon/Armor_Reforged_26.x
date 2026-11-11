@@ -31,7 +31,7 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_GREEN)));
 
     public static final Block ALLOY_SMELTER = registerBlock("alloy_smelter",
-            properties -> new AlloySmelterBlock(properties.strength(3f).requiresCorrectToolForDrops()));
+            properties -> new AlloySmelterBlock(properties.strength(3f).requiresCorrectToolForDrops().lightLevel(state -> state.getValue(AlloySmelterBlock.LIT) ? 15:0 ).mapColor(MapColor.COLOR_GRAY)));
 
 
 
