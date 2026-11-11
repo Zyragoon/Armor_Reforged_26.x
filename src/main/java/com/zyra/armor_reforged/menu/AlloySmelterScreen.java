@@ -15,6 +15,22 @@ public class AlloySmelterScreen extends AbstractContainerScreen<AlloySmelterMenu
                     ArmorReforged.MOD_ID,
                     "textures/gui/alloy_smelter/alloy_smelter.png"
             );
+
+    private static final Identifier ARROW_TEXTURE =
+            Identifier.fromNamespaceAndPath(
+                    ArmorReforged.MOD_ID,
+                    "textures/gui/alloy_smelter/alloy_smelter_arrow.png"
+            );
+
+    private static final Identifier FLAME_TEXTURE =
+            Identifier.fromNamespaceAndPath(
+                    ArmorReforged.MOD_ID,
+                    "textures/gui/alloy_smelter/alloy_smelter_flame.png"
+            );
+
+
+
+
     public AlloySmelterScreen(
             AlloySmelterMenu menu,
             Inventory inventory,
@@ -44,5 +60,48 @@ public class AlloySmelterScreen extends AbstractContainerScreen<AlloySmelterMenu
                 256,
                 256
         );
+
+
+                // Progress arrow
+        int progress = menu.getMaxProgress() > 0
+                ? menu.getProgress() * 24 / menu.getMaxProgress()
+                : 0;
+
+        if (progress > 0) {
+            graphics.blit(
+                    RenderPipelines.GUI_TEXTURED,
+                    ARROW_TEXTURE,
+                    this.leftPos + 79,
+                    this.topPos + 34,
+                    0, 0,
+                    progress, 16,
+                    24, 16
+
+            );
+        }
+
+// Fuel flame
+        int fuel = menu.getMaxBurnTime() > 0
+                ? menu.getBurnTime() * 14 / menu.getMaxBurnTime()
+                : 0;
+
+        if (fuel > 0) {
+            graphics.blit(
+                    RenderPipelines.GUI_TEXTURED,
+                    FLAME_TEXTURE,
+                    this.leftPos + 56,
+                    this.topPos + 51 - fuel,
+                    0, 14 - fuel,
+                    14, fuel,
+                    14, 14
+            );
+        }
+
+
+
     }
+
+
+
+
 }

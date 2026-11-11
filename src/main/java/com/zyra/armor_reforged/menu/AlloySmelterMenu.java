@@ -141,4 +141,12 @@ public class AlloySmelterMenu extends AbstractContainerMenu {
     public int getMaxProgress() {
         return this.data.get(1);
     }
+
+    public int getBurnTime() {
+        return this.data.get(2);
+    }
+
+    public int getMaxBurnTime() {
+        return this.data.get(3);
+    }
 }
