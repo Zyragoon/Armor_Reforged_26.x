@@ -1,8 +1,11 @@
 package com.zyra.armor_reforged.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -120,6 +123,9 @@ public class AlloySmelterBlock extends BaseEntityBlock {
             double x = pos.getX() + 0.5 + facing.getStepX() * 0.52;
             double y = pos.getY() + 0.4 + random.nextDouble() * 0.3;
             double z = pos.getZ() + 0.5 + facing.getStepZ() * 0.52;
+            if (random.nextDouble()< 0.15){
+                level.playLocalSound(x, y, z, SoundEvents.BLASTFURNACE_FIRE_CRACKLE, SoundSource.BLOCKS, 1.0f, 1.0f,false);
+            }
 
             level.addParticle(
                     ParticleTypes.SMOKE,

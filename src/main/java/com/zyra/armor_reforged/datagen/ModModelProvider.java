@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
 
@@ -21,7 +22,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.JADE_CRYSTAL_BLOCK);
 
-        blockModelGenerators.createHorizontallyRotatedBlock(ModBlocks.ALLOY_SMELTER, TexturedModel.ORIENTABLE);
+        blockModelGenerators.createFurnace(ModBlocks.ALLOY_SMELTER, TexturedModel.ORIENTABLE);
+
+
     }
 
     @Override
