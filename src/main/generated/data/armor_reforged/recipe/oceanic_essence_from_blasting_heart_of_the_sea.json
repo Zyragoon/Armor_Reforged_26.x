@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "group": "oceanic",
+  "ingredient": "minecraft:heart_of_the_sea",
+  "result": {
+    "id": "armor_reforged:oceanic_essence"
+  }
+}

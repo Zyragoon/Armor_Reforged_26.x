@@ -30,8 +30,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List<ItemLike> STEEL_SMELTABLES = List.of(ModItems.STEEL_AXE, ModItems.STEEL_CHESTPLATE, ModItems.STEEL_HOE, ModItems.STEEL_PICKAXE,
                         ModItems.STEEL_BOOTS, ModItems.STEEL_HELMET, ModItems.STEEL_LEGGINGS, ModItems.STEEL_SHOVEL, ModItems.STEEL_SPEAR, ModItems.STEEL_SWORD);
 
+                List<ItemLike> OCEANIC = List.of(Items.HEART_OF_THE_SEA);
+
                 oreSmelting(STEEL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.STEEL_NUGGET, 0.25f,200, "steel");
                 oreBlasting(STEEL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.STEEL_NUGGET, 0.25f,100, "steel");
+
+
+                oreSmelting(OCEANIC, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.OCEANIC_ESSENCE, 0.5f,200,"oceanic");
+                oreBlasting(OCEANIC, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.OCEANIC_ESSENCE, 0.5f,100,"oceanic");
 
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.STEEL_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEEL_BLOCK);
 
@@ -174,6 +180,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
                         .group("blocks")
                         .save(output,"alloy_smelter");
+
+
+
+
+                ;
             }
         };
     }
