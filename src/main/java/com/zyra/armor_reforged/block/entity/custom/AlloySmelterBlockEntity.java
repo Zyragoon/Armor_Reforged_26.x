@@ -3,6 +3,9 @@ package com.zyra.armor_reforged.block.entity.custom;
 import com.zyra.armor_reforged.block.entity.ImplementedInventory;
 import com.zyra.armor_reforged.block.entity.ModBlockEntities;
 import com.zyra.armor_reforged.item.ModItems;
+import com.zyra.armor_reforged.recipe.ModRecipes;
+import com.zyra.armor_reforged.recipe.custom.AlloySmelterRecipe;
+import com.zyra.armor_reforged.recipe.custom.AlloySmelterRecipeInput;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
@@ -11,6 +14,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
@@ -20,6 +24,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -29,6 +34,8 @@ import org.jetbrains.annotations.Nullable;
 import com.zyra.armor_reforged.menu.AlloySmelterMenu;
 import net.minecraft.world.Container;
 import com.zyra.armor_reforged.block.custom.AlloySmelterBlock;
+
+import java.util.Optional;
 
 
 public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvider, ImplementedInventory{
@@ -179,20 +186,46 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
 
     }
 
+
+
+
     private boolean hasRecipe() {
-        ItemStack output = new ItemStack(ModItems.STEEL_INGOT);
+        Optional<RecipeHolder<AlloySmelterRecipe>> recipe = getCurrentRecipe();
 
-        boolean hasInput1 = inventory.get(INPUT_SLOT_1).is(Items.IRON_INGOT);
-        boolean hasInput2 = inventory.get(INPUT_SLOT_2).is(Items.COAL);
+        if (recipe.isEmpty()) {
+            return false;
+        }
 
-        boolean outputIsValid = inventory.get(OUTPUT_SLOT).isEmpty()
+        ItemStack output = recipe.get().value().assemble(
+                new AlloySmelterRecipeInput(
+                        inventory.get(INPUT_SLOT_1),
+                        inventory.get(INPUT_SLOT_2)
+                )
+        );
+
+        boolean isItemOutputRight = inventory.get(OUTPUT_SLOT).isEmpty()
                 || inventory.get(OUTPUT_SLOT).is(output.getItem());
 
-        boolean hasOutputSpace = inventory.get(OUTPUT_SLOT).getCount()
+        boolean isAmountRight = inventory.get(OUTPUT_SLOT).getCount()
                 + output.getCount() <= inventory.get(OUTPUT_SLOT).getMaxStackSize();
 
-        return hasInput1 && hasInput2 && outputIsValid && hasOutputSpace;
+        return isItemOutputRight && isAmountRight;
     }
+
+
+    private Optional<RecipeHolder<AlloySmelterRecipe>> getCurrentRecipe() {
+        return ((ServerLevel) level).recipeAccess()
+                .getRecipeFor(
+                        ModRecipes.ALLOY_SMELTER_TYPE,
+                        new AlloySmelterRecipeInput(
+                                inventory.get(INPUT_SLOT_1),
+                                inventory.get(INPUT_SLOT_2)
+                        ),
+                        (ServerLevel) level
+                );
+    }
+
+
     private boolean hasFuel() {
         return getFuelTime() > 0;
     }

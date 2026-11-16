@@ -1,0 +1,8 @@
+{
+  "type": "armor_reforged:alloying",
+  "ingredient1": "minecraft:iron_ingot",
+  "ingredient2": "minecraft:coal",
+  "result": {
+    "id": "armor_reforged:steel_ingot"
+  }
+}

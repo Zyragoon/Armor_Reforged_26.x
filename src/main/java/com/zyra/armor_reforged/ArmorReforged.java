@@ -7,6 +7,7 @@ import com.zyra.armor_reforged.item.ModItems;
 
 import com.zyra.armor_reforged.menu.ModMenuTypes;
 
+import com.zyra.armor_reforged.recipe.ModRecipes;
 import net.fabricmc.api.ModInitializer;
 
 
@@ -27,6 +28,7 @@ public class ArmorReforged implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModBlockEntities.initialize();
 		ModMenuTypes.initialize();
+		ModRecipes.registerModRecipes();
 
 
 

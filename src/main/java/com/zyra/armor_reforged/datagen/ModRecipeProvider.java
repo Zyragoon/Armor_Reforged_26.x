@@ -1,7 +1,9 @@
 package com.zyra.armor_reforged.datagen;
 
 import com.zyra.armor_reforged.block.ModBlocks;
+import com.zyra.armor_reforged.datagen.recipe.AlloySmelterRecipeBuilder;
 import com.zyra.armor_reforged.item.ModItems;
+import com.zyra.armor_reforged.recipe.custom.AlloySmelterRecipe;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
@@ -10,6 +12,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -181,10 +184,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("blocks")
                         .save(output,"alloy_smelter");
 
+                AlloySmelterRecipeBuilder.alloySmelterRecipe(RecipeCategory.MISC, Ingredient.of(Items.IRON_INGOT), Ingredient.of(Items.COAL), ModItems.STEEL_INGOT)
+                        .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                        .save(output, "armor_reforged:steel_ingot_from_alloying");
 
 
 
-                ;
             }
         };
     }
