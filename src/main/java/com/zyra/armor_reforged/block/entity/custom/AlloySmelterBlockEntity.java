@@ -34,7 +34,11 @@ import org.jetbrains.annotations.Nullable;
 import com.zyra.armor_reforged.menu.AlloySmelterMenu;
 import net.minecraft.world.Container;
 import com.zyra.armor_reforged.block.custom.AlloySmelterBlock;
-
+import com.zyra.armor_reforged.recipe.ModRecipes;
+import com.zyra.armor_reforged.recipe.custom.AlloySmelterRecipe;
+import com.zyra.armor_reforged.recipe.custom.AlloySmelterRecipeInput;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import java.util.Optional;
 
 
@@ -48,7 +52,7 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
 
     private final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 200;
 
     private int burnTime = 0;
     private int maxBurnTime = 0;
@@ -106,7 +110,7 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
     protected void loadAdditional(ValueInput input) {
         super.loadAdditional(input);
         progress = input.getIntOr("alloy_smelter.progress", 0);
-        maxProgress = input.getIntOr("alloy_smelter.max_progress", 72);
+        maxProgress = input.getIntOr("alloy_smelter.max_progress", 200);
         burnTime = input.getIntOr("alloy_smelter.burn_time", 0);
         maxBurnTime = input.getIntOr("alloy_smelter.max_burn_time", 0);
 
@@ -189,6 +193,8 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
 
 
 
+
+
     private boolean hasRecipe() {
         Optional<RecipeHolder<AlloySmelterRecipe>> recipe = getCurrentRecipe();
 
@@ -203,13 +209,15 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
                 )
         );
 
-        boolean isItemOutputRight = inventory.get(OUTPUT_SLOT).isEmpty()
-                || inventory.get(OUTPUT_SLOT).is(output.getItem());
+        ItemStack currentOutput = inventory.get(OUTPUT_SLOT);
 
-        boolean isAmountRight = inventory.get(OUTPUT_SLOT).getCount()
-                + output.getCount() <= inventory.get(OUTPUT_SLOT).getMaxStackSize();
+        boolean outputIsValid = currentOutput.isEmpty()
+                || ItemStack.isSameItemSameComponents(currentOutput, output);
 
-        return isItemOutputRight && isAmountRight;
+        boolean hasOutputSpace = currentOutput.getCount() + output.getCount()
+                <= output.getMaxStackSize();
+
+        return outputIsValid && hasOutputSpace;
     }
 
 
@@ -271,16 +279,30 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
 
 
     private void craftItem() {
+        Optional<RecipeHolder<AlloySmelterRecipe>> recipe = getCurrentRecipe();
+
+        if (recipe.isEmpty()) {
+            return;
+        }
+
+        AlloySmelterRecipeInput input = new AlloySmelterRecipeInput(
+                inventory.get(INPUT_SLOT_1),
+                inventory.get(INPUT_SLOT_2)
+        );
+
+        ItemStack output = recipe.get().value().assemble(input);
+        ItemStack currentOutput = inventory.get(OUTPUT_SLOT);
+
+        if (currentOutput.isEmpty()) {
+            inventory.set(OUTPUT_SLOT, output);
+        } else if (ItemStack.isSameItemSameComponents(currentOutput, output)) {
+            currentOutput.grow(output.getCount());
+        } else {
+            return;
+        }
+
         inventory.get(INPUT_SLOT_1).shrink(1);
         inventory.get(INPUT_SLOT_2).shrink(1);
-
-        ItemStack output = inventory.get(OUTPUT_SLOT);
-
-        if (output.isEmpty()) {
-            inventory.set(OUTPUT_SLOT, new ItemStack(ModItems.STEEL_INGOT));
-        } else {
-            output.grow(1);
-        }
     }
 
     private boolean isOutputSlotEmptyOrReceivable() {
@@ -298,7 +320,7 @@ public class AlloySmelterBlockEntity extends BlockEntity  implements MenuProvide
 
     private void resetProgress() {
         progress = 0;
-        maxProgress = 72;
+        maxProgress = 200;
     }
 
     /* BLOCK ENTITY SYNC METHODS */

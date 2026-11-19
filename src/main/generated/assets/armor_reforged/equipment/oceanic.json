@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "armor_reforged:oceanic"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "armor_reforged:oceanic"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "armor_reforged:oceanic"
+      }
+    ]
+  }
+}

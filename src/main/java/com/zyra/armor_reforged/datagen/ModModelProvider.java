@@ -21,6 +21,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.STEEL_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.JADE_CRYSTAL_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.OCEANIC_BLOCK);
 
         blockModelGenerators.createFurnace(ModBlocks.ALLOY_SMELTER, TexturedModel.ORIENTABLE);
 
@@ -35,6 +36,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.RHODONITE_CHUNK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.IRON_PLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.OCEANIC_ESSENCE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.OCEANIC_INGOT, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerators.generateFlatItem(ModItems.STEEL_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.STEEL_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
@@ -53,6 +55,18 @@ public class ModModelProvider extends FabricModelProvider {
                 ItemModelGenerators.TRIM_PREFIX_LEGGINGS,false);
         itemModelGenerators.generateTrimmableItem(ModItems.STEEL_BOOTS, ModArmorMaterials.STEEL_KEY,
                 ItemModelGenerators.TRIM_PREFIX_BOOTS,false);
+
+
+        itemModelGenerators.generateTrimmableItem(ModItems.OCEANIC_HELMET, ModArmorMaterials.OCEANIC_KEY,
+                ItemModelGenerators.TRIM_PREFIX_HELMET,false);
+        itemModelGenerators.generateTrimmableItem(ModItems.OCEANIC_CHESTPLATE, ModArmorMaterials.OCEANIC_KEY,
+                ItemModelGenerators.TRIM_PREFIX_CHESTPLATE,false);
+        itemModelGenerators.generateTrimmableItem(ModItems.OCEANIC_LEGGINGS, ModArmorMaterials.OCEANIC_KEY,
+                ItemModelGenerators.TRIM_PREFIX_LEGGINGS,false);
+        itemModelGenerators.generateTrimmableItem(ModItems.OCEANIC_BOOTS, ModArmorMaterials.OCEANIC_KEY,
+                ItemModelGenerators.TRIM_PREFIX_BOOTS,false);
+
+
 
     }
 }

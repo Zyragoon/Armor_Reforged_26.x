@@ -43,6 +43,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 oreBlasting(OCEANIC, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.OCEANIC_ESSENCE, 0.5f,100,"oceanic");
 
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.STEEL_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEEL_BLOCK);
+                nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.OCEANIC_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANIC_BLOCK);
 
 
 
@@ -189,7 +190,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output, "armor_reforged:steel_ingot_from_alloying");
 
 
+                AlloySmelterRecipeBuilder.alloySmelterRecipe(RecipeCategory.MISC, Ingredient.of(Items.COAL), Ingredient.of(Items.IRON_INGOT), ModItems.STEEL_INGOT)
+                        .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                        .save(output, "armor_reforged:steel_ingot_from_alloying_reversed");
 
+                AlloySmelterRecipeBuilder.alloySmelterRecipe(RecipeCategory.MISC, Ingredient.of(ModItems.OCEANIC_ESSENCE), Ingredient.of(ModItems.STEEL_INGOT), ModItems.OCEANIC_INGOT)
+                        .unlockedBy(getHasName(ModItems.OCEANIC_ESSENCE), has(ModItems.OCEANIC_ESSENCE))
+                        .save(output, "armor_reforged:oceanic_ingot_from_alloying");
+
+                AlloySmelterRecipeBuilder.alloySmelterRecipe(RecipeCategory.MISC, Ingredient.of(ModItems.STEEL_INGOT), Ingredient.of(ModItems.OCEANIC_ESSENCE), ModItems.OCEANIC_INGOT)
+                        .unlockedBy(getHasName(ModItems.OCEANIC_ESSENCE), has(ModItems.OCEANIC_ESSENCE))
+                        .save(output, "armor_reforged:oceanic_ingot_from_alloying_reversed");
             }
         };
     }

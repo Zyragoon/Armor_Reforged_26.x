@@ -13,9 +13,22 @@ import net.minecraft.world.item.equipment.EquipmentAsset;
 public class ModArmorMaterials {
     public static final ResourceKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY =
             ResourceKey.createRegistryKey(Identifier.withDefaultNamespace("equipment_asset"));
+
     public static final ResourceKey<EquipmentAsset> STEEL_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(ArmorReforged.MOD_ID, "steel"));
+
+    public static final ResourceKey<EquipmentAsset> OCEANIC_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(ArmorReforged.MOD_ID, "oceanic"));
+
+
 
     public static final ArmorMaterial STEEL_ARMOR_MATERIAL = new ArmorMaterial(20,
             ArmorMaterials.makeDefense(3,6,7,3,6),
             15, SoundEvents.ARMOR_EQUIP_IRON,1,0, ModTags.Items.STEEL_REPAIR, STEEL_KEY);
+
+
+
+    public static final ArmorMaterial OCEANIC_ARMOR_MATERIAL = new ArmorMaterial(37,
+            ArmorMaterials.makeDefense(3,6,8,3,19),
+            15, SoundEvents.ARMOR_EQUIP_NETHERITE,3.0f,0,ModTags.Items.OCEANIC_REPAIR, OCEANIC_KEY);
+
+
 }

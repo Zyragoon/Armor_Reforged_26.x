@@ -28,7 +28,15 @@ public class ModEquipmentAssestProvider implements DataProvider {
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(Identifier.fromNamespaceAndPath(ArmorReforged.MOD_ID,"steel"))
                         .build());
+
+        consumer.accept(ModArmorMaterials.OCEANIC_KEY,
+                EquipmentClientInfo.builder()
+                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(ArmorReforged.MOD_ID,"oceanic"))
+                        .build());
+
     }
+
+
 
     @Override
     public CompletableFuture<?> run(final CachedOutput cache) {

@@ -21,6 +21,7 @@ public class ModTags {
     public static class Items {
 
         public static final TagKey<Item> STEEL_REPAIR = createTag("steel_repair");
+        public static final TagKey<Item> OCEANIC_REPAIR = createTag("oceanic_repair");
 
 
         private static TagKey<Item> createTag(String name) {

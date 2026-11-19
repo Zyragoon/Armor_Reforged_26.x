@@ -21,7 +21,8 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ModTags.Items.STEEL_REPAIR)
                 .add(ModItems.STEEL_INGOT);
 
-
+        valueLookupBuilder(ModTags.Items.OCEANIC_REPAIR)
+                .add(ModItems.OCEANIC_INGOT);
 
         valueLookupBuilder(ItemTags.AXES)
                 .add(ModItems.STEEL_AXE);
@@ -43,20 +44,27 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
 
 
         valueLookupBuilder(ItemTags.HEAD_ARMOR)
-                .add(ModItems.STEEL_HELMET);
+                .add(ModItems.STEEL_HELMET)
+                .add(ModItems.OCEANIC_HELMET);
 
         valueLookupBuilder(ItemTags.CHEST_ARMOR)
-                .add(ModItems.STEEL_CHESTPLATE);
+                .add(ModItems.STEEL_CHESTPLATE)
+                .add(ModItems.OCEANIC_CHESTPLATE);
 
         valueLookupBuilder(ItemTags.LEG_ARMOR)
-                .add(ModItems.STEEL_LEGGINGS);
+                .add(ModItems.STEEL_LEGGINGS)
+                .add(ModItems.OCEANIC_LEGGINGS);
 
         valueLookupBuilder(ItemTags.FOOT_ARMOR)
-                .add(ModItems.STEEL_BOOTS);
-
-
+                .add(ModItems.STEEL_BOOTS)
+                .add(ModItems.OCEANIC_BOOTS);
 
         valueLookupBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
-                .add(ModItems.STEEL_INGOT);
+                .add(ModItems.STEEL_INGOT)
+                .add(ModItems.OCEANIC_INGOT);
+
+
+
+
     }
 }

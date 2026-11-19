@@ -1,0 +1,8 @@
+{
+  "type": "armor_reforged:alloying",
+  "ingredient1": "armor_reforged:steel_ingot",
+  "ingredient2": "armor_reforged:oceanic_essence",
+  "result": {
+    "id": "armor_reforged:oceanic_ingot"
+  }
+}

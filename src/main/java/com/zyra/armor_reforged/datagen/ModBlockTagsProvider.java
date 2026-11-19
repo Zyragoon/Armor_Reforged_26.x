@@ -20,7 +20,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.STEEL_BLOCK)
                 .add(ModBlocks.JADE_CRYSTAL_BLOCK)
                 .add(ModBlocks.RHODONITE_CRYSTAL_BLOCK)
-                .add(ModBlocks.ALLOY_SMELTER);
+                .add(ModBlocks.ALLOY_SMELTER)
+                .add(ModBlocks.OCEANIC_BLOCK);
 
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
@@ -37,10 +38,14 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.JADE_CRYSTAL_BLOCK);
 
         valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
-                .add(ModBlocks.STEEL_BLOCK);
+                .add(ModBlocks.STEEL_BLOCK)
+                .add(ModBlocks.OCEANIC_BLOCK);
 
 
         valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL)
                 .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.OCEANIC_BLOCK);
     }
 }

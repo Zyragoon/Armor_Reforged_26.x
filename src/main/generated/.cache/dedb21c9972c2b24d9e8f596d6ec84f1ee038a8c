@@ -1,12 +1,13 @@
 // 26.1.2	-999999999-01-01T00:00:00	Armor Reforged/Tags for minecraft:item
+e4e8dcbf7730c23bab0b20946a2ad0d249b79337 data/armor_reforged/tags/item/oceanic_repair.json
 fdbdf294b0847feb6f012ab3ba52c59ba66e47fd data/armor_reforged/tags/item/steel_repair.json
 d7893d633d3256a5244fd7d7b8e9606c5ec26dc0 data/minecraft/tags/item/axes.json
-fdbdf294b0847feb6f012ab3ba52c59ba66e47fd data/minecraft/tags/item/beacon_payment_items.json
-85117020eac3ab30e671cce55a92c9a092b77ec5 data/minecraft/tags/item/chest_armor.json
-2a7cb7af9ad8d727c864a4fb2f063af3406703b6 data/minecraft/tags/item/foot_armor.json
-91b426e89d158cf2dc2067c5e4201f46f9d8a7f1 data/minecraft/tags/item/head_armor.json
+dc641b2881540ed3943bb26df0378b87cdf7dc17 data/minecraft/tags/item/beacon_payment_items.json
+d0dc4c85605c4ec8e773bcf7f7e50849c96a8d11 data/minecraft/tags/item/chest_armor.json
+b8e4e99d288cc242418f6c7e401cdb6075071917 data/minecraft/tags/item/foot_armor.json
+a7bff2015d515057314ffeb6690225c67cdb2ad1 data/minecraft/tags/item/head_armor.json
 9b79a425478fac38b8e21dcb3bb4cf71eaacbc06 data/minecraft/tags/item/hoes.json
-713d504ac6119191e384f1dd8e22042b5e7d2316 data/minecraft/tags/item/leg_armor.json
+bd1e9139456c45dcf408592c18c18064f3ec86de data/minecraft/tags/item/leg_armor.json
 3f64eb843f15f3f87f8d9ba5dff3e49f22b53b1c data/minecraft/tags/item/pickaxes.json
 b2e32a6a38685f27b1c22416721652bb6b118d23 data/minecraft/tags/item/shovels.json
 90878da7b15d93c0023afd642ad565ee366fac47 data/minecraft/tags/item/spears.json

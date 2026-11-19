@@ -30,6 +30,9 @@ public class ModBlocks {
             properties -> new Block(properties.strength(1.5f).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()
                     .mapColor(MapColor.COLOR_GREEN)));
 
+    public static final Block OCEANIC_BLOCK = registerBlock("oceanic_block",
+            properties -> new Block(properties.strength(50f,1200).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops().mapColor(MapColor.COLOR_BLUE)));
+
     public static final Block ALLOY_SMELTER = registerBlock("alloy_smelter",
             properties -> new AlloySmelterBlock(properties.strength(3f).requiresCorrectToolForDrops().lightLevel(state -> state.getValue(AlloySmelterBlock.LIT) ? 15:0 ).mapColor(MapColor.COLOR_GRAY)));
 

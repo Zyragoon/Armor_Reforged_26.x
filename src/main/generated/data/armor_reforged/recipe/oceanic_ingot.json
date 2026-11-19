@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "armor_reforged:oceanic_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "armor_reforged:oceanic_ingot"
+  }
+}

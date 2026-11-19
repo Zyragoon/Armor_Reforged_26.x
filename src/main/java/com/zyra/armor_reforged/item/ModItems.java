@@ -20,6 +20,7 @@ public class ModItems {
     public static final Item STEEL_NUGGET = registerItem("steel_nugget", Item::new);
     public static final Item IRON_PLATE = registerItem("iron_plate", Item::new);
     public static final Item OCEANIC_ESSENCE = registerItem("oceanic_essence", Item::new);
+    public static final Item OCEANIC_INGOT = registerItem("oceanic_ingot", Item::new);
 
 
     public static final Item STEEL_SWORD = registerItem("steel_sword",
@@ -46,6 +47,15 @@ public class ModItems {
     public static final Item STEEL_BOOTS = registerItem("steel_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
+    public static final Item OCEANIC_HELMET = registerItem("oceanic_helmet",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.OCEANIC_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final Item OCEANIC_CHESTPLATE = registerItem("oceanic_chestplate",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.OCEANIC_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final Item OCEANIC_LEGGINGS = registerItem("oceanic_leggings",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.OCEANIC_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final Item OCEANIC_BOOTS = registerItem("oceanic_boots",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.OCEANIC_ARMOR_MATERIAL, ArmorType.BOOTS)));
+
 
 
 
@@ -61,7 +71,7 @@ public class ModItems {
 
 
     public static void registerModItems() {
-        ArmorReforged.LOGGER.info("Registering Mod Items for"+ ArmorReforged.MOD_ID);
+        ArmorReforged.LOGGER.info("Registering Mod Items for "+ ArmorReforged.MOD_ID);
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> output.accept(STEEL_INGOT));
     }

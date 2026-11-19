@@ -23,8 +23,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RHODONITE_CHUNK);
                         output.accept(ModItems.IRON_PLATE);
                         output.accept(ModItems.OCEANIC_ESSENCE);
+                        output.accept(ModItems.OCEANIC_INGOT);
 
                         output.accept(ModBlocks.STEEL_BLOCK);
+                        output.accept(ModBlocks.OCEANIC_BLOCK);
                         output.accept(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
                         output.accept(ModBlocks.JADE_CRYSTAL_BLOCK);
                         output.accept(ModBlocks.ALLOY_SMELTER);
@@ -33,6 +35,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.STEEL_CHESTPLATE);
                         output.accept(ModItems.STEEL_LEGGINGS);
                         output.accept(ModItems.STEEL_BOOTS);
+
+                        output.accept(ModItems.OCEANIC_HELMET);
+                        output.accept(ModItems.OCEANIC_CHESTPLATE);
+                        output.accept(ModItems.OCEANIC_LEGGINGS);
+                        output.accept(ModItems.OCEANIC_BOOTS);
 
                         output.accept(ModItems.STEEL_SWORD);
                         output.accept(ModItems.STEEL_AXE);
