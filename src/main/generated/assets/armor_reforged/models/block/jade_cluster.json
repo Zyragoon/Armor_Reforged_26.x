@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "armor_reforged:block/jade_cluster"
+  }
+}

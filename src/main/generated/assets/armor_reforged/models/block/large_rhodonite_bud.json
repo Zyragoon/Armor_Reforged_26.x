@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "armor_reforged:block/large_rhodonite_bud"
+  }
+}

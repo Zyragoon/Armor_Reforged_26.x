@@ -22,6 +22,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.JADE_CRYSTAL_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.OCEANIC_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.BUDDING_JADE);
+        blockModelGenerators.createTrivialCube(ModBlocks.BUDDING_RHODONITE);
+        blockModelGenerators.createAmethystCluster(ModBlocks.JADE_CLUSTER);
+        blockModelGenerators.createAmethystCluster(ModBlocks.RHODONITE_CLUSTER);
+        blockModelGenerators.createAmethystCluster(ModBlocks.SMALL_JADE_BUD);
+        blockModelGenerators.createAmethystCluster(ModBlocks.SMALL_RHODONITE_BUD);
+        blockModelGenerators.createAmethystCluster(ModBlocks.MEDIUM_JADE_BUD);
+        blockModelGenerators.createAmethystCluster(ModBlocks.MEDIUM_RHODONITE_BUD);
+        blockModelGenerators.createAmethystCluster(ModBlocks.LARGE_JADE_BUD);
+        blockModelGenerators.createAmethystCluster(ModBlocks.LARGE_RHODONITE_BUD);
 
         blockModelGenerators.createFurnace(ModBlocks.ALLOY_SMELTER, TexturedModel.ORIENTABLE);
 
@@ -65,6 +75,40 @@ public class ModModelProvider extends FabricModelProvider {
                 ItemModelGenerators.TRIM_PREFIX_LEGGINGS,false);
         itemModelGenerators.generateTrimmableItem(ModItems.OCEANIC_BOOTS, ModArmorMaterials.OCEANIC_KEY,
                 ItemModelGenerators.TRIM_PREFIX_BOOTS,false);
+
+        itemModelGenerators.generateFlatItem(
+                ModBlocks.SMALL_JADE_BUD.asItem(),
+                ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(
+                ModBlocks.MEDIUM_JADE_BUD.asItem(),
+                ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(
+                ModBlocks.LARGE_JADE_BUD.asItem(),
+                ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(
+                ModBlocks.JADE_CLUSTER.asItem(),
+                ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(
+                ModBlocks.SMALL_RHODONITE_BUD.asItem(),
+                ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(
+                ModBlocks.MEDIUM_RHODONITE_BUD.asItem(),
+                ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(
+                ModBlocks.LARGE_RHODONITE_BUD.asItem(),
+                ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(
+                ModBlocks.RHODONITE_CLUSTER.asItem(),
+                ModelTemplates.FLAT_ITEM);
+
+
 
 
 

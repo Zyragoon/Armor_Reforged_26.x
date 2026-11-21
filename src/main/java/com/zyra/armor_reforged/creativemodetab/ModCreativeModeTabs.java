@@ -30,6 +30,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
                         output.accept(ModBlocks.JADE_CRYSTAL_BLOCK);
                         output.accept(ModBlocks.ALLOY_SMELTER);
+                        output.accept(ModBlocks.BUDDING_JADE);
+                        output.accept(ModBlocks.SMALL_JADE_BUD);
+                        output.accept(ModBlocks.MEDIUM_JADE_BUD);
+                        output.accept(ModBlocks.LARGE_JADE_BUD);
+                        output.accept(ModBlocks.JADE_CLUSTER);
+                        output.accept(ModBlocks.BUDDING_RHODONITE);
+                        output.accept(ModBlocks.SMALL_RHODONITE_BUD);
+                        output.accept(ModBlocks.MEDIUM_RHODONITE_BUD);
+                        output.accept(ModBlocks.LARGE_RHODONITE_BUD);
+                        output.accept(ModBlocks.RHODONITE_CLUSTER);
 
                         output.accept(ModItems.STEEL_HELMET);
                         output.accept(ModItems.STEEL_CHESTPLATE);
