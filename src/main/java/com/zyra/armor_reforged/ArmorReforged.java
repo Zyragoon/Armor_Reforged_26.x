@@ -3,6 +3,8 @@ package com.zyra.armor_reforged;
 import com.zyra.armor_reforged.block.ModBlocks;
 import com.zyra.armor_reforged.block.entity.ModBlockEntities;
 import com.zyra.armor_reforged.creativemodetab.ModCreativeModeTabs;
+import com.zyra.armor_reforged.item.ArmorSetBonuses;
+import com.zyra.armor_reforged.item.ModArmorSets;
 import com.zyra.armor_reforged.item.ModItems;
 
 import com.zyra.armor_reforged.menu.ModMenuTypes;
@@ -29,6 +31,8 @@ public class ArmorReforged implements ModInitializer {
 		ModBlockEntities.initialize();
 		ModMenuTypes.initialize();
 		ModRecipes.registerModRecipes();
+		ModArmorSets.registerSets();
+		ArmorSetBonuses.register();
 
 
 
