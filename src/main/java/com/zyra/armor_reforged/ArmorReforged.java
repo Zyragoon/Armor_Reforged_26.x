@@ -33,6 +33,7 @@ public class ArmorReforged implements ModInitializer {
 		ModRecipes.registerModRecipes();
 		ModArmorSets.registerSets();
 		ArmorSetBonuses.register();
+		ModLootTableModifiers.modifyLootTables();
 
 
 

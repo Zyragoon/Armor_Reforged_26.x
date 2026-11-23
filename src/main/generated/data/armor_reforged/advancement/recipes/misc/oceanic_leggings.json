@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oceanic_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": "armor_reforged:oceanic_smithing_template"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "armor_reforged:oceanic_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oceanic_template"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "armor_reforged:oceanic_leggings"
+    ]
+  }
+}

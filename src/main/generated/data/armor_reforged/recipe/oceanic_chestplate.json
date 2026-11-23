@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "armor_reforged:oceanic_ingot",
+  "base": "minecraft:diamond_chestplate",
+  "result": {
+    "id": "armor_reforged:oceanic_chestplate"
+  },
+  "template": "armor_reforged:oceanic_smithing_template"
+}

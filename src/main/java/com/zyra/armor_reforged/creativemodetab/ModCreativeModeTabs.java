@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.IRON_PLATE);
                         output.accept(ModItems.OCEANIC_ESSENCE);
                         output.accept(ModItems.OCEANIC_INGOT);
+                        output.accept(ModItems.OCEANIC_SMITHING_TEMPLATE);
 
                         output.accept(ModBlocks.STEEL_BLOCK);
                         output.accept(ModBlocks.OCEANIC_BLOCK);

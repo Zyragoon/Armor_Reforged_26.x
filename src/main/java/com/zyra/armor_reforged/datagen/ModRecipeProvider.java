@@ -16,6 +16,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -184,6 +186,56 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
                         .group("blocks")
                         .save(output,"alloy_smelter");
+
+
+
+
+                shaped(RecipeCategory.MISC,ModItems.OCEANIC_SMITHING_TEMPLATE,2)
+                        .pattern("DSD")
+                        .pattern("DND")
+                        .pattern("DDD")
+                        .define('D',Items.DIAMOND)
+                        .define('N',Items.NAUTILUS_SHELL)
+                        .define('S',ModItems.OCEANIC_SMITHING_TEMPLATE)
+                        .unlockedBy(getHasName(ModItems.OCEANIC_SMITHING_TEMPLATE),has(ModItems.OCEANIC_SMITHING_TEMPLATE))
+                        .group("misc");
+
+
+
+                SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.OCEANIC_SMITHING_TEMPLATE),
+                                Ingredient.of(Items.DIAMOND_HELMET),
+                                Ingredient.of(ModItems.OCEANIC_INGOT),
+                                RecipeCategory.MISC,
+                                ModItems.OCEANIC_HELMET)
+                                .unlocks("has_oceanic_template", has(ModItems.OCEANIC_SMITHING_TEMPLATE))
+                                .save(output, "oceanic_helmet");
+
+                SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.OCEANIC_SMITHING_TEMPLATE),
+                                Ingredient.of(Items.DIAMOND_CHESTPLATE),
+                                Ingredient.of(ModItems.OCEANIC_INGOT),
+                                RecipeCategory.MISC,
+                                ModItems.OCEANIC_CHESTPLATE)
+                        .unlocks("has_oceanic_template", has(ModItems.OCEANIC_SMITHING_TEMPLATE))
+                        .save(output, "oceanic_chestplate");
+
+                SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.OCEANIC_SMITHING_TEMPLATE),
+                                Ingredient.of(Items.DIAMOND_LEGGINGS),
+                                Ingredient.of(ModItems.OCEANIC_INGOT),
+                                RecipeCategory.MISC,
+                                ModItems.OCEANIC_LEGGINGS)
+                        .unlocks("has_oceanic_template", has(ModItems.OCEANIC_SMITHING_TEMPLATE))
+                        .save(output, "oceanic_leggings");
+
+                SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.OCEANIC_SMITHING_TEMPLATE),
+                                Ingredient.of(Items.DIAMOND_BOOTS),
+                                Ingredient.of(ModItems.OCEANIC_INGOT),
+                                RecipeCategory.MISC,
+                                ModItems.OCEANIC_BOOTS)
+                        .unlocks("has_oceanic_template", has(ModItems.OCEANIC_SMITHING_TEMPLATE))
+                        .save(output, "oceanic_boots");
+
+
+
 
                 AlloySmelterRecipeBuilder.alloySmelterRecipe(RecipeCategory.MISC, Ingredient.of(Items.IRON_INGOT), Ingredient.of(Items.COAL), ModItems.STEEL_INGOT)
                         .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))

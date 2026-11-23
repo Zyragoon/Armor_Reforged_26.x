@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "armor_reforged:oceanic_ingot",
+  "base": "minecraft:diamond_helmet",
+  "result": {
+    "id": "armor_reforged:oceanic_helmet"
+  },
+  "template": "armor_reforged:oceanic_smithing_template"
+}
