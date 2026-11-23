@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -29,9 +30,22 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.STEEL_BLOCK);
         dropSelf(ModBlocks.ALLOY_SMELTER);
         dropSelf(ModBlocks.OCEANIC_BLOCK);
+        dropSelf(ModBlocks.JADE_CRYSTAL_BLOCK);
+        dropSelf(ModBlocks.RHODONITE_CRYSTAL_BLOCK);
 
-        add(ModBlocks.JADE_CRYSTAL_BLOCK, createMultipleOreDrops(ModBlocks.JADE_CRYSTAL_BLOCK, ModItems.JADE_CHUNK,3,5));
-        add(ModBlocks.RHODONITE_CRYSTAL_BLOCK, createMultipleOreDrops(ModBlocks.RHODONITE_CRYSTAL_BLOCK, ModItems.RHODONITE_CHUNK,3,5));
+        add(ModBlocks.JADE_CLUSTER, createMultipleOreDrops(ModBlocks.JADE_CLUSTER,ModItems.JADE_CHUNK,4,4));
+        add(ModBlocks.RHODONITE_CLUSTER, createMultipleOreDrops(ModBlocks.RHODONITE_CLUSTER, ModItems.RHODONITE_CHUNK,4,4));
+
+        dropWhenSilkTouch(ModBlocks.LARGE_RHODONITE_BUD);
+        dropWhenSilkTouch(ModBlocks.MEDIUM_RHODONITE_BUD);
+        dropWhenSilkTouch(ModBlocks.SMALL_RHODONITE_BUD);
+        dropWhenSilkTouch(ModBlocks.BUDDING_RHODONITE);
+
+        dropWhenSilkTouch(ModBlocks.LARGE_JADE_BUD);
+        dropWhenSilkTouch(ModBlocks.MEDIUM_JADE_BUD);
+        dropWhenSilkTouch(ModBlocks.SMALL_JADE_BUD);
+        dropWhenSilkTouch(ModBlocks.BUDDING_JADE);
+        dropWhenSilkTouch(Blocks.BUDDING_AMETHYST);
     }
 
 

@@ -4,6 +4,14 @@
     "armor_reforged:jade_crystal_block",
     "armor_reforged:rhodonite_crystal_block",
     "armor_reforged:alloy_smelter",
-    "armor_reforged:oceanic_block"
+    "armor_reforged:oceanic_block",
+    "armor_reforged:small_jade_bud",
+    "armor_reforged:medium_jade_bud",
+    "armor_reforged:large_jade_bud",
+    "armor_reforged:jade_cluster",
+    "armor_reforged:small_rhodonite_bud",
+    "armor_reforged:medium_rhodonite_bud",
+    "armor_reforged:large_rhodonite_bud",
+    "armor_reforged:rhodonite_cluster"
   ]
 }

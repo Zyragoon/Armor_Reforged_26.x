@@ -21,7 +21,15 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.JADE_CRYSTAL_BLOCK)
                 .add(ModBlocks.RHODONITE_CRYSTAL_BLOCK)
                 .add(ModBlocks.ALLOY_SMELTER)
-                .add(ModBlocks.OCEANIC_BLOCK);
+                .add(ModBlocks.OCEANIC_BLOCK)
+                .add(ModBlocks.SMALL_JADE_BUD)
+                .add(ModBlocks.MEDIUM_JADE_BUD)
+                .add(ModBlocks.LARGE_JADE_BUD)
+                .add(ModBlocks.JADE_CLUSTER)
+                .add(ModBlocks.SMALL_RHODONITE_BUD)
+                .add(ModBlocks.MEDIUM_RHODONITE_BUD)
+                .add(ModBlocks.LARGE_RHODONITE_BUD)
+                .add(ModBlocks.RHODONITE_CLUSTER);
 
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
