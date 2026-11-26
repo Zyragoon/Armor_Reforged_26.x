@@ -43,8 +43,8 @@ public class ModBlocks {
             BlockBehaviour.Properties properties
     ) {
         return properties
-                .noCollision()
                 .noOcclusion()
+                .forceSolidOn()
                 .strength(0.5f)
                 .sound(SoundType.AMETHYST);
 
@@ -53,22 +53,22 @@ public class ModBlocks {
     public static final CrystalBlock SMALL_JADE_BUD =
             registerBlock("small_jade_bud",
                     properties -> new CrystalBlock(
-                            crystalProperties(properties), 0));
+                            crystalProperties(properties).noOcclusion().forceSolidOn(), 0));
 
     public static final CrystalBlock MEDIUM_JADE_BUD =
             registerBlock("medium_jade_bud",
                     properties -> new CrystalBlock(
-                            crystalProperties(properties), 1));
+                            crystalProperties(properties).noOcclusion().forceSolidOn(), 1));
 
     public static final CrystalBlock LARGE_JADE_BUD =
             registerBlock("large_jade_bud",
                     properties -> new CrystalBlock(
-                            crystalProperties(properties), 2));
+                            crystalProperties(properties).noOcclusion().forceSolidOn(), 2));
 
     public static final CrystalBlock JADE_CLUSTER =
             registerBlock("jade_cluster",
                     properties -> new CrystalBlock(
-                            crystalProperties(properties), 3));
+                            crystalProperties(properties).noOcclusion().forceSolidOn(), 3));
 
 
 
@@ -96,22 +96,22 @@ public class ModBlocks {
     public static final CrystalBlock SMALL_RHODONITE_BUD =
             registerBlock("small_rhodonite_bud",
                     properties -> new CrystalBlock(
-                            crystalProperties(properties), 0));
+                            crystalProperties(properties).noOcclusion().forceSolidOn(), 0));
 
     public static final CrystalBlock MEDIUM_RHODONITE_BUD =
             registerBlock("medium_rhodonite_bud",
                     properties -> new CrystalBlock(
-                            crystalProperties(properties), 1));
+                            crystalProperties(properties).noOcclusion().forceSolidOn(), 1));
 
     public static final CrystalBlock LARGE_RHODONITE_BUD =
             registerBlock("large_rhodonite_bud",
                     properties -> new CrystalBlock(
-                            crystalProperties(properties), 2));
+                            crystalProperties(properties).noOcclusion().forceSolidOn(), 2));
 
     public static final CrystalBlock RHODONITE_CLUSTER =
             registerBlock("rhodonite_cluster",
                     properties -> new CrystalBlock(
-                            crystalProperties(properties), 3));
+                            crystalProperties(properties).noOcclusion().forceSolidOn(), 3));
 
 
 

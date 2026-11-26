@@ -19,7 +19,10 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.Map;
 
 public class CrystalBlock extends Block implements SimpleWaterloggedBlock {
 
@@ -30,9 +33,17 @@ public class CrystalBlock extends Block implements SimpleWaterloggedBlock {
             BlockStateProperties.WATERLOGGED;
 
     private final int growthStage;
+    private final Map<Direction, VoxelShape> shapes;
 
     public CrystalBlock(Properties properties, int growthStage) {
-        super(properties);
+        super(properties.lightLevel(state -> switch (growthStage){
+            case 0 -> 1;
+            case 1 -> 2;
+            case 2 -> 4;
+            case 3 -> 5;
+            default -> 0;
+
+        }));
 
         if (growthStage < 0 || growthStage > 3) {
             throw new IllegalArgumentException(
@@ -41,6 +52,19 @@ public class CrystalBlock extends Block implements SimpleWaterloggedBlock {
         }
 
         this.growthStage = growthStage;
+
+        float height = switch (growthStage) {
+            case 0 -> 3.0F;
+            case 1 -> 4.0F;
+            case 2 -> 5.0F;
+            default -> 7.0F;
+        };
+
+        float width = growthStage == 0 ? 8.0F : 10.0F;
+
+        this.shapes = Shapes.rotateAll(
+                Block.boxZ(width, 16.0F - height, 16.0F)
+        );
 
         registerDefaultState(
                 defaultBlockState()
@@ -151,30 +175,7 @@ public class CrystalBlock extends Block implements SimpleWaterloggedBlock {
             BlockPos pos,
             CollisionContext context
     ) {
-        double length = switch (growthStage) {
-            case 0 -> 4.0;
-            case 1 -> 6.0;
-            case 2 -> 9.0;
-            default -> 12.0;
-        };
-
-        double width = switch (growthStage) {
-            case 0 -> 4.0;
-            case 1 -> 6.0;
-            case 2 -> 8.0;
-            default -> 10.0;
-        };
-
-        double min = (16.0 - width) / 2.0;
-        double max = (16.0 + width) / 2.0;
-
-        return switch (state.getValue(FACING)) {
-            case UP -> Block.box(min, 0, min, max, length, max);
-            case DOWN -> Block.box(min, 16 - length, min, max, 16, max);
-            case NORTH -> Block.box(min, min, 16 - length, max, max, 16);
-            case SOUTH -> Block.box(min, min, 0, max, max, length);
-            case EAST -> Block.box(0, min, min, length, max, max);
-            case WEST -> Block.box(16 - length, min, min, 16, max, max);
-        };
-    }
+        return shapes.get(state.getValue(FACING));
+    };
 }
+

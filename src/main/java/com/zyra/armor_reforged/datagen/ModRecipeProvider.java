@@ -198,7 +198,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('N',Items.NAUTILUS_SHELL)
                         .define('S',ModItems.OCEANIC_SMITHING_TEMPLATE)
                         .unlockedBy(getHasName(ModItems.OCEANIC_SMITHING_TEMPLATE),has(ModItems.OCEANIC_SMITHING_TEMPLATE))
-                        .group("misc");
+                        .group("misc")
+                        .save(output);
+
+
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.RHODONITE_CRYSTAL_BLOCK)
+                        .pattern("RR")
+                        .pattern("RR")
+                        .define('R',ModItems.RHODONITE_CHUNK)
+                        .unlockedBy(getHasName(ModItems.RHODONITE_CHUNK),has(ModItems.RHODONITE_CHUNK))
+                        .group("building_blocks")
+                        .save(output);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS,ModBlocks.JADE_CRYSTAL_BLOCK)
+                        .pattern("JJ")
+                        .pattern("JJ")
+                        .define('J',ModItems.JADE_CHUNK)
+                        .unlockedBy(getHasName(ModItems.JADE_CHUNK),has(ModItems.JADE_CHUNK))
+                        .group("building_blocks")
+                        .save(output);
 
 
 

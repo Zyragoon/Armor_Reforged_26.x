@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "building_blocks",
+  "key": {
+    "J": "armor_reforged:jade_chunk"
+  },
+  "pattern": [
+    "JJ",
+    "JJ"
+  ],
+  "result": {
+    "id": "armor_reforged:jade_crystal_block"
+  }
+}

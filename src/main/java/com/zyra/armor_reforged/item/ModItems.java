@@ -74,6 +74,6 @@ public class ModItems {
     public static void registerModItems() {
         ArmorReforged.LOGGER.info("Registering Mod Items for "+ ArmorReforged.MOD_ID);
 
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> output.accept(STEEL_INGOT));
+
     }
 }
